@@ -1,5 +1,15 @@
 {
-    "name": "xhunter-server",
-    "description": "backbone for xhunter app",
-    "repository": "https://github.com/anirudhmalik/xhunter/tree/master/xhunter-server"
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ]
 }
